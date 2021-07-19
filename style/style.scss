@@ -1,0 +1,269 @@
+//Colors
+$dark-magenta: hsl(300, 43%, 22%);
+$pink: hsl(333, 80%, 67%);
+$grayish-magenta: hsl(303, 10%, 53%);
+$light-magenta: hsl(300, 24%, 96%);
+$white: hsl(0, 0%, 100%);
+* {
+    box-sizing: border-box;
+    font-family: "Spartan";
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    background-color: $white;
+    background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0, 100% -100%;
+    overflow: hidden;
+    height: 100%;
+    color: $dark-magenta;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //align-content: center;
+    //width: 150vh;
+    //height: 50%;
+    margin: 5% 12%;
+    // padding: 10%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 40vh);
+    grid-template-areas: "header . rates" "smith roberts wallace";
+    justify-content: center;
+    align-content: center;
+    gap: 2rem 3rem;
+    margin-top: 2rem;
+    //width: 120vh;
+    //height: 50%;
+}
+
+.header {
+    grid-area: header;
+    line-height: 1;
+    //width: 110%;
+    font-size: 2rem;
+}
+
+.main-title {
+    width: 110%;
+}
+
+.subhead {
+    margin-top: 2rem;
+    color: $grayish-magenta;
+    font-size: 1.4rem;
+    width: 120%;
+    line-height: 1.5;
+}
+
+.rates-container {
+    grid-area: rates;
+}
+
+.rate-flexbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.rate {
+    background-color: $light-magenta;
+    border-radius: 7px;
+    margin: 0.5rem;
+    padding: 1.5rem;
+    width: 58vh;
+    img {
+        display: inline;
+    }
+    span {
+        margin: 0 1.5rem;
+    }
+    br {
+        display: none;
+    }
+}
+
+.first {
+    grid-area: first;
+    margin-left: -16rem;
+}
+
+.second {
+    grid-area: second;
+    margin-left: -8rem;
+}
+
+.third {
+    grid-area: third;
+}
+
+.review {
+    background-color: $dark-magenta;
+    color: $white;
+    height: 32vh;
+    width: 55vh;
+    font-size: 1.1rem;
+    border-radius: 7px;
+    justify-content: center;
+    align-items: center;
+    //justify-self: stretch;
+    img {
+        width: 14%;
+        border-radius: 50%;
+        float: left;
+        margin-right: 1.5rem;
+    }
+    span {
+        color: $pink;
+    }
+    .name {
+        //float: left;
+        padding-top: 0.5rem;
+        line-height: 1.5;
+    }
+    .content {
+        margin: 3rem 3.5rem 2rem 3rem;
+    }
+    .text {
+        //margin: 1rem 0 2rem 0;
+        line-height: 1.7;
+    }
+}
+
+.smith {
+    grid-area: smith;
+}
+
+.roberts {
+    grid-area: roberts;
+    margin-top: 2rem;
+}
+
+.wallace {
+    grid-area: wallace;
+    margin-top: 4rem;
+}
+
+.attribution {
+    font-size: 1.3rem;
+    position: absolute;
+    bottom: 1vh;
+    right: 10vh;
+    margin: auto;
+    a {
+        color: $dark-magenta;
+    }
+    a:hover {
+        color: $pink;
+    }
+}
+
+@media (max-device-width: 480px) {
+    body {
+        overflow-y: scroll;
+    }
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 4rem 3rem;
+    }
+    .main-title {
+        font-size: 1.5rem;
+        width: 100%;
+        padding: 0 4rem;
+    }
+    .subhead {
+        width: 100%;
+        padding: 0 3.5rem;
+    }
+    // .first .second .third {
+    //     margin: 0;
+    // }
+    // .second {
+    //     margin: 0;
+    // }
+    // .third {
+    //     margin: 0;
+    // }
+    .rate {
+        margin: 1rem;
+        height: 10vh;
+        line-height: 2;
+        br {
+            display: block;
+        }
+    }
+    .review {
+        margin: 0;
+        height: 30vh;
+        text-align: left;
+    }
+    .attribution {
+        display: none;
+    }
+}
+
+@media (min-device-width: 480px) and (max-device-width: 769px) {
+    body {
+        overflow-y: scroll;
+    }
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 4rem 3rem;
+    }
+    .main-title {
+        font-size: 1.5rem;
+        width: 100%;
+        padding: 0 10rem;
+        line-height: 1.5;
+    }
+    .subhead {
+        width: 100%;
+        padding: 0 8rem;
+    }
+    // .first .second .third {
+    //     margin: 0;
+    // }
+    .rate {
+        margin: 1rem;
+        height: 7vh;
+        line-height: 2;
+        br {
+            display: block;
+        }
+    }
+    .review {
+        margin: 0;
+        height: 20vh;
+        text-align: left;
+        .text {
+            text-align: left;
+            margin: 3rem 5rem 1rem 0;
+        }
+    }
+    .attribution {
+        display: none;
+    }
+}

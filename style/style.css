@@ -1,0 +1,307 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Spartan";
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  background-color: white;
+  background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0, 100% -100%;
+  overflow: hidden;
+  height: 100%;
+  color: #502050;
+}
+
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5% 12%;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (40vh)[2];
+      grid-template-rows: repeat(2, 40vh);
+      grid-template-areas: "header . rates" "smith roberts wallace";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 2rem 3rem;
+  margin-top: 2rem;
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  line-height: 1;
+  font-size: 2rem;
+}
+
+.main-title {
+  width: 110%;
+}
+
+.subhead {
+  margin-top: 2rem;
+  color: #937b92;
+  font-size: 1.4rem;
+  width: 120%;
+  line-height: 1.5;
+}
+
+.rates-container {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: rates;
+}
+
+.rate-flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.rate {
+  background-color: #f7f2f7;
+  border-radius: 7px;
+  margin: 0.5rem;
+  padding: 1.5rem;
+  width: 58vh;
+}
+
+.rate img {
+  display: inline;
+}
+
+.rate span {
+  margin: 0 1.5rem;
+}
+
+.rate br {
+  display: none;
+}
+
+.first {
+  grid-area: first;
+  margin-left: -16rem;
+}
+
+.second {
+  grid-area: second;
+  margin-left: -8rem;
+}
+
+.third {
+  grid-area: third;
+}
+
+.review {
+  background-color: #502050;
+  color: white;
+  height: 32vh;
+  width: 55vh;
+  font-size: 1.1rem;
+  border-radius: 7px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.review img {
+  width: 14%;
+  border-radius: 50%;
+  float: left;
+  margin-right: 1.5rem;
+}
+
+.review span {
+  color: #ee68a4;
+}
+
+.review .name {
+  padding-top: 0.5rem;
+  line-height: 1.5;
+}
+
+.review .content {
+  margin: 3rem 3.5rem 2rem 3rem;
+}
+
+.review .text {
+  line-height: 1.7;
+}
+
+.smith {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: smith;
+}
+
+.roberts {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: roberts;
+  margin-top: 2rem;
+}
+
+.wallace {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: wallace;
+  margin-top: 4rem;
+}
+
+.attribution {
+  font-size: 1.3rem;
+  position: absolute;
+  bottom: 1vh;
+  right: 10vh;
+  margin: auto;
+}
+
+.attribution a {
+  color: #502050;
+}
+
+.attribution a:hover {
+  color: #ee68a4;
+}
+
+@media (max-device-width: 480px) {
+  body {
+    overflow-y: scroll;
+  }
+  .grid-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    margin: 4rem 3rem;
+  }
+  .main-title {
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 0 4rem;
+  }
+  .subhead {
+    width: 100%;
+    padding: 0 3.5rem;
+  }
+  .rate {
+    margin: 1rem;
+    height: 10vh;
+    line-height: 2;
+  }
+  .rate br {
+    display: block;
+  }
+  .review {
+    margin: 0;
+    height: 30vh;
+    text-align: left;
+  }
+  .attribution {
+    display: none;
+  }
+}
+
+@media (min-device-width: 480px) and (max-device-width: 769px) {
+  body {
+    overflow-y: scroll;
+  }
+  .grid-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    margin: 4rem 3rem;
+  }
+  .main-title {
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 0 10rem;
+    line-height: 1.5;
+  }
+  .subhead {
+    width: 100%;
+    padding: 0 8rem;
+  }
+  .rate {
+    margin: 1rem;
+    height: 7vh;
+    line-height: 2;
+  }
+  .rate br {
+    display: block;
+  }
+  .review {
+    margin: 0;
+    height: 20vh;
+    text-align: left;
+  }
+  .review .text {
+    text-align: left;
+    margin: 3rem 5rem 1rem 0;
+  }
+  .attribution {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
