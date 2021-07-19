@@ -30,11 +30,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    //align-content: center;
-    //width: 150vh;
-    //height: 50%;
     margin: 5% 12%;
-    // padding: 10%;
 }
 
 .grid-container {
@@ -46,14 +42,11 @@ body {
     align-content: center;
     gap: 2rem 3rem;
     margin-top: 2rem;
-    //width: 120vh;
-    //height: 50%;
 }
 
 .header {
     grid-area: header;
     line-height: 1;
-    //width: 110%;
     font-size: 2rem;
 }
 
@@ -121,7 +114,6 @@ body {
     border-radius: 7px;
     justify-content: center;
     align-items: center;
-    //justify-self: stretch;
     img {
         width: 14%;
         border-radius: 50%;
@@ -132,7 +124,6 @@ body {
         color: $pink;
     }
     .name {
-        //float: left;
         padding-top: 0.5rem;
         line-height: 1.5;
     }
@@ -140,7 +131,6 @@ body {
         margin: 3rem 3.5rem 2rem 3rem;
     }
     .text {
-        //margin: 1rem 0 2rem 0;
         line-height: 1.7;
     }
 }
@@ -194,15 +184,6 @@ body {
         width: 100%;
         padding: 0 3.5rem;
     }
-    // .first .second .third {
-    //     margin: 0;
-    // }
-    // .second {
-    //     margin: 0;
-    // }
-    // .third {
-    //     margin: 0;
-    // }
     .rate {
         margin: 1rem;
         height: 10vh;
@@ -243,9 +224,6 @@ body {
         width: 100%;
         padding: 0 8rem;
     }
-    // .first .second .third {
-    //     margin: 0;
-    // }
     .rate {
         margin: 1rem;
         height: 7vh;
